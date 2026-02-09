@@ -30,5 +30,39 @@ function loginUserMessage(username) {
 }
 
 let message =  loginUserMessage("Shihab")
-console.log(message)
+// console.log(message)
 // console.log(loginUserMessage())  // if no argument is passed it passes undefined as argument
+
+
+
+function calculateCartPrice(...num1){
+// functtion calculateCartPrice(val1, val2, ...num1)  -> num1 = [400, 600]
+    return num1.reduce((acc, num) => acc + num, 5)
+}
+
+// console.log(calculateCartPrice(200, 300, 400 ,600)) // val1 = 200, val2 = 300 & num1 = [400, 600]
+
+
+const user = {
+    username: "Shihab",
+    price: 199
+}
+
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+
+// handleObject(user)
+handleObject({
+    username: "Shihab",
+    price: 69
+})
+
+const myNewArray = [200, 400, 600, 100]
+
+function returnSecondValue(getArray) {
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([200, 569, 600, 100]))
